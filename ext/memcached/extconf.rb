@@ -36,7 +36,7 @@ def compile_libmemcached
   return if ENV["EXTERNAL_LIB"]
 
   Dir.chdir(LIBMEMCACHED_DIR) do
-    Dir.mkdir("build") if !Dir.exists?("build")
+    Dir.mkdir("build") if !Dir.exist?("build")
     build_folder = File.join(LIBMEMCACHED_DIR, "build")
 
     ts_now=(Time.now - 1800).strftime("%Y%m%d%H%M.%S")
